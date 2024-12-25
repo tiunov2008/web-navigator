@@ -9,20 +9,21 @@
     <div class="unis">
         <div class="container">
             <div class="unis-wrapper">
-                <div class="unis-list__item">
-                    <img src="{% static './img/uni-img.jpeg' %}" alt="" class="unis-list__item-img">
-                    <div class="unis-list__item-right">
-                        <h2 class="unis-list__item-title">Реклама и связи с общественностью</h2>
-                        <p class="unis-list__item-info">
-                            Математика(базовая): 80+<br>
-                            Русский: 80+<br>
-                            Обществознание: 80+<br>
-                            ср балл: 82<br>
-                        </p>
-                        <span>Зарплата: 60к+</span>
+                {% for uni in unis %}
+                    <div class="unis-list__item">
+                        <img src="{% static './img/uni-img.jpeg' %}" alt="" class="unis-list__item-img">
+                        <div class="unis-list__item-right">
+                            <h2 class="unis-list__item-title">{{ uni.title }}</h2>
+                            <p class="unis-list__item-info">
+                                {{ uni.text }}
+                            </p>
+                            <span>Зарплата: {{ uni.wage }}к+</span>
+                            <span>Дата обновления: {{ uni.date }}</span>
+                            <a href="{{ uni.source }}">Источник</a>
+                        </div>
+                        <button class="more">Подробнее</button>
                     </div>
-                    <button class="more">Подробнее</button>
-                </div>
+                {% endfor%}
             </div>
         </div>
     </div>
