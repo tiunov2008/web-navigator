@@ -31,14 +31,14 @@
                     </defs>
                     </svg>
                 <ul class="header-nav">
-                    <li class="header-nav__item"><a href="/">главная</a></li>
+                    <li class="header-nav__item"><a href="/">Главная</a></li>
                     <li class="header-nav__item"><a href="{% url 'unis:list' %}">ВУЗы</a></li>
-                    <li class="header-nav__item"><a href="/">статьи</a></li>
-                    <li class="header-nav__item"><a href="/about">о нас</a></li>
+                    <li class="header-nav__item"><a href="/about">О нас</a></li>
                 </ul>
                 <div class="header-user">
+                    <img src="" alt="" class="header-user__avatar">
                     {% if user.is_authenticated %}
-                    <a class="header-user__name" href="#">{{user.username}}</a>
+                    <a class="header-user__name" href="{% url 'users:profile' %}">{{user.username}}</a>
                     <form action="{% url 'users:logout' %}" class="logout" method='post'>
                         {% csrf_token %}
                         <button class="header-user__name">Выйти</button>

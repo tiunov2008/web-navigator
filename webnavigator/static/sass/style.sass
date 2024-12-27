@@ -65,7 +65,7 @@ body
             margin: 0
             font-family: Jost
             cursor: pointer
-            &:first-child
+            &:not(:last-child)
                 margin-right: 10px
 .hero
     &-wrapper
@@ -190,6 +190,9 @@ body
 .unis
     padding-top: 50px
     &-list
+        display: flex
+        flex-direction: column
+        gap: 15px 0
         &__item
             display: flex
             border-radius: 10px
@@ -202,9 +205,10 @@ body
             line-height: normal
             &-img
                 margin-right: 50px
-                width: 400px
-                height: 225px
+                width: 200px
+                height: 100%
                 border-radius: 5px
+                object-fit: cover
             &-title, &-title a
                 font-size: 20px
                 text-decoration: none
@@ -216,8 +220,9 @@ body
     &-page
         .unis-list__item
             &-img
-                width: 40%
-                height: 350px
+                width: 30%
+                height: 100%
+
 .register
     &-form
         color: #000

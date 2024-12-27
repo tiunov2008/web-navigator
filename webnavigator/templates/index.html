@@ -52,7 +52,9 @@
                 <div class="best-cards">
                     {% for uni in unis %}
                         <div class="best-card">
-                            <img src="{{ uni.img.url }}" alt="{{ uni.title }}">
+                            <a href="{% url 'unis:page' slug=uni.slug %}">
+                                <img src="{{ uni.img.url }}" alt="{{ uni.title }}">
+                            </a>
                             <span class="best-card__name">{{ uni.title }}</span>
                         </div>
                     {% endfor%}

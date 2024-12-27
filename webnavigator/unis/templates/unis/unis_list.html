@@ -9,25 +9,31 @@
     <div class="unis">
         <div class="container">
             <div class="unis-wrapper">
-                {% for uni in unis %}
-                    <div class="unis-list__item">
-                        <a href="{% url 'unis:page' slug=uni.slug %}" class="unis-list__item-img--wrapper">
-                            <img src="{{ uni.img.url }}" alt="{{ uni.title }}" class="unis-list__item-img">
-                        </a>
-                        <div class="unis-list__item-right">
-                            <h2 >
-                                <a class="unis-list__item-title" href="{% url 'unis:page' slug=uni.slug %}">{{ uni.title }}</a>
-                            </h2>
-                            <p class="unis-list__item-info">
-                                {{ uni.text }}
-                            </p>
-                            <span>Зарплата: {{ uni.wage }}к+</span>
-                            <span>Дата обновления: {{ uni.date }}</span>
-                            <a href="{{ uni.source }}">Источник</a>
+                <div class="unis-list">
+                    {% for uni in unis %}
+                        <div class="unis-list__item">
+                            <a href="{% url 'unis:page' slug=uni.slug %}" class="unis-list__item-img--wrapper">
+                                <img src="{{ uni.img.url }}" alt="{{ uni.title }}" class="unis-list__item-img">
+                            </a>
+                            <div class="unis-list__item-right">
+                                <h2 >
+                                    <a class="unis-list__item-title" href="{% url 'unis:page' slug=uni.slug %}">{{ uni.title }}</a>
+                                </h2>
+                                <p class="unis-list__item-info">
+                                    {{ uni.text }}
+                                </p>
+                                {% if uni.scoreBudget != 0 %}
+                                <span>Средний балл на бюджет: {{ uni.scoreBudget }}</span><br>
+                                {% endif %}
+                                {% if uni.scorePaid != 0 %}
+                                <span>Средний балл на платное: {{ uni.scorePaid }}</span><br>
+                                {% endif %}
+                                <span>Зарплата: {{ uni.wage }}к+</span>
+                            </div>
+                            <a href="{% url 'unis:page' slug=uni.slug %}" class="more">Подробнее</a>
                         </div>
-                        <a href="{% url 'unis:page' slug=uni.slug %}" class="more">Подробнее</a>
-                    </div>
-                {% endfor%}
+                    {% endfor%}
+                </div>
             </div>
         </div>
     </div>

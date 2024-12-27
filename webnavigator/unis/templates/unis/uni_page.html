@@ -15,11 +15,18 @@
                         <h2 >
                             {{ uni.title }}
                         </h2>
+                        <p>{{ uni.about }}</p>
                         <p class="unis-list__item-info">
-                            {{ uni.text }}
+                            {{ uni.body }}
                         </p>
-                        <span>Зарплата: {{ uni.wage }}к+</span>
-                        <span>Дата обновления: {{ uni.date }}</span>
+                        {% if uni.scoreBudget != 0 %}
+                        <span>Средний балл на бюджет: {{ uni.scoreBudget }}</span><br>
+                        {% endif %}
+                        {% if uni.scorePaid != 0 %}
+                        <span>Средний балл на платное: {{ uni.scorePaid }}</span><br>
+                        {% endif %}
+                        <span>Зарплата: {{ uni.wage }}к+</span><br>
+                        <span>Дата обновления: {{ uni.date }}</span><br>
                         <a href="{{ uni.source }}">Источник</a>
                     </div>
                 </div>
