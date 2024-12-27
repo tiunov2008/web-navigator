@@ -68,7 +68,17 @@ body {
 .header-user__name {
   font-size: 20px;
   font-weight: 500;
-  line-height: 16.52px;
+  color: #fff;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: Jost;
+  cursor: pointer;
+}
+.header-user__name:first-child {
+  margin-right: 10px;
 }
 
 .hero-wrapper {
@@ -78,11 +88,13 @@ body {
   align-items: center;
 }
 .hero-title {
-  color: #151E63;
   text-align: right;
   font-size: 72px;
   font-weight: 500;
   line-height: 73.53px;
+  background: linear-gradient(90deg, #4287ff 100%, #0015d4 35%, #4966fc 100%);
+  background-clip: text;
+  color: transparent;
 }
 .hero-top {
   display: flex;
@@ -107,6 +119,11 @@ body {
 }
 .hero-button:first-child {
   margin-right: 20px;
+}
+.hero-bg {
+  background: #000;
+  width: 1000px;
+  height: 300px;
 }
 
 .best {
@@ -149,6 +166,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 30px 5%;
+  width: 100%;
 }
 
 .news {
@@ -243,4 +261,47 @@ body {
 .unis-page .unis-list__item-img {
   width: 40%;
   height: 350px;
+}
+
+.register-form {
+  color: #000;
+}
+.register-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    max-width: 768px;
+  }
+  .best-card {
+    width: 30%;
+  }
+}
+@media (max-width: 940px) {
+  .hero-top {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (max-width: 640px) {
+  .container {
+    max-width: 576px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 425px;
+  }
+}
+@media (max-width: 425px) {
+  .container {
+    max-width: 320px;
+  }
 }

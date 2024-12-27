@@ -37,8 +37,16 @@
                     <li class="header-nav__item"><a href="/about">о нас</a></li>
                 </ul>
                 <div class="header-user">
-                    <img src="" alt="" class="header-user__avatar">
-                    <span class="header-user__name">личный <br>кабинет</span>
+                    {% if user.is_authenticated %}
+                    <a class="header-user__name" href="#">{{user.username}}</a>
+                    <form action="{% url 'users:logout' %}" class="logout" method='post'>
+                        {% csrf_token %}
+                        <button class="header-user__name">Выйти</button>
+                    </form>
+                    {% else %}
+                    <a class="header-user__name" href="{% url 'users:register' %}">Регистрация</a>
+                    <a class="header-user__name" href="{% url 'users:login' %}">Вход</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
