@@ -9,11 +9,13 @@
     <div class="register">
         <div class="container">
             <div class="register-wrapper">
-                <form action="/users/register/" method="POST" class="register-form">
-                    {% csrf_token %}
-                    {{ form }}
-                    <button class="button-submit">Зарегистрироваться</button>
-                </form>
+                <div class="unis-list__item">
+                    <form action="/users/register/" method="POST" class="register-form">
+                        {% csrf_token %}
+                        {{ form }}
+                        <button class="button-submit">Зарегистрироваться</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
