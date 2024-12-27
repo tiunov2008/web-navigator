@@ -25,7 +25,9 @@
                         {% if uni.scorePaid != 0 %}
                         <span>Средний балл на платное: {{ uni.scorePaid }}</span><br>
                         {% endif %}
+                        {% if uni.wage != 0 %}
                         <span>Зарплата: {{ uni.wage }}к+</span><br>
+                        {% endif %}
                         <span>Дата обновления: {{ uni.date }}</span><br>
                         <a href="{{ uni.source }}">Источник</a>
                     </div>

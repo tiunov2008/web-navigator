@@ -32,7 +32,9 @@
                                 {% if uni.scorePaid != 0 %}
                                 <span>Средний балл на платное: {{ uni.scorePaid }}</span><br>
                                 {% endif %}
-                                <span>Зарплата: {{ uni.wage }}к+</span>
+                                {% if uni.wage != 0 %}
+                                <span>Зарплата: {{ uni.wage }}к+</span><br>
+                                {% endif %}
                             </div>
                             <a href="{% url 'unis:page' slug=uni.slug %}" class="more">Подробнее</a>
                         </div>
