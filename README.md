@@ -1,5 +1,7 @@
 # 1.Start Project
 ---
+```git clone https://github.com/tiunov2008/web-navigator```
+
 ```py -m venv .venv```
 
 ```source .venv/Scripts/activate```
