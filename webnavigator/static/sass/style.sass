@@ -13,6 +13,7 @@ body
     max-width: 75%
     margin: 0 auto
 .more
+    display: block
     border-radius: 5px
     background: $blue
     padding: 15px 35px
@@ -23,6 +24,8 @@ body
     font-style: normal
     font-weight: 700
     align-self: flex-end
+    cursor: pointer
+    text-decoration: none
 .header
     background: $blue
     &-wrapper
@@ -186,9 +189,16 @@ body
                 width: 400px
                 height: 225px
                 border-radius: 5px
-            &-title
+            &-title, &-title a
                 font-size: 20px
+                text-decoration: none
+                color: #000
             &-right
                 margin-right: auto
             &-info
                 font-size: 16px
+    &-page
+        .unis-list__item
+            &-img
+                width: 40%
+                height: 350px

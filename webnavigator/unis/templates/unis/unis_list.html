@@ -11,9 +11,13 @@
             <div class="unis-wrapper">
                 {% for uni in unis %}
                     <div class="unis-list__item">
-                        <img src="{% static './img/uni-img.jpeg' %}" alt="" class="unis-list__item-img">
+                        <a href="{% url 'unis:page' slug=uni.slug %}" class="unis-list__item-img--wrapper">
+                            <img src="{{ uni.img.url }}" alt="{{ uni.title }}" class="unis-list__item-img">
+                        </a>
                         <div class="unis-list__item-right">
-                            <h2 class="unis-list__item-title">{{ uni.title }}</h2>
+                            <h2 >
+                                <a class="unis-list__item-title" href="{% url 'unis:page' slug=uni.slug %}">{{ uni.title }}</a>
+                            </h2>
                             <p class="unis-list__item-info">
                                 {{ uni.text }}
                             </p>
@@ -21,7 +25,7 @@
                             <span>Дата обновления: {{ uni.date }}</span>
                             <a href="{{ uni.source }}">Источник</a>
                         </div>
-                        <button class="more">Подробнее</button>
+                        <a href="{% url 'unis:page' slug=uni.slug %}" class="more">Подробнее</a>
                     </div>
                 {% endfor%}
             </div>

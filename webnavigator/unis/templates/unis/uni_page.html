@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}
+    {{ uni.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="unis">
+        <div class="container">
+            <div class="unis-wrapper">
+                <div class="unis-list__item unis-page">
+                    <img src="{{ uni.img.url }}" alt="{{ uni.title }}" class="unis-list__item-img">
+                    <div class="unis-list__item-right">
+                        <h2 >
+                            {{ uni.title }}
+                        </h2>
+                        <p class="unis-list__item-info">
+                            {{ uni.text }}
+                        </p>
+                        <span>Зарплата: {{ uni.wage }}к+</span>
+                        <span>Дата обновления: {{ uni.date }}</span>
+                        <a href="{{ uni.source }}">Источник</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

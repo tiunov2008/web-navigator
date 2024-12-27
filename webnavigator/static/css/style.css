@@ -15,6 +15,7 @@ body {
 }
 
 .more {
+  display: block;
   border-radius: 5px;
   background: #2478BD;
   padding: 15px 35px;
@@ -25,6 +26,8 @@ body {
   font-style: normal;
   font-weight: 700;
   align-self: flex-end;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .header {
@@ -226,12 +229,18 @@ body {
   height: 225px;
   border-radius: 5px;
 }
-.unis-list__item-title {
+.unis-list__item-title, .unis-list__item-title a {
   font-size: 20px;
+  text-decoration: none;
+  color: #000;
 }
 .unis-list__item-right {
   margin-right: auto;
 }
 .unis-list__item-info {
   font-size: 16px;
+}
+.unis-page .unis-list__item-img {
+  width: 40%;
+  height: 350px;
 }
