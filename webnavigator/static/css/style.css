@@ -64,6 +64,7 @@ body {
   width: 55px;
   height: 55px;
   margin-right: 10px;
+  object-fit: cover;
 }
 .header-user__name {
   font-size: 20px;
@@ -116,6 +117,7 @@ body {
   border-radius: 39px;
   background: #2478BD;
   border: none;
+  cursor: pointer;
 }
 .hero-button:first-child {
   margin-right: 20px;
@@ -160,6 +162,7 @@ body {
 .best-card img {
   width: 136px;
   height: 136px;
+  object-fit: cover;
 }
 .best-cards {
   margin-top: 50px;
@@ -264,6 +267,9 @@ body {
 .unis-list__item-info {
   font-size: 16px;
 }
+.unis-list__item-score {
+  margin-bottom: 15px;
+}
 .unis-page .unis-list__item-img {
   width: 30%;
   height: 100%;
@@ -275,6 +281,32 @@ body {
 .register-wrapper {
   display: flex;
   justify-content: center;
+}
+
+.profile-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.profile-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  font-size: 20px;
+}
+.profile-img {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.button {
+  padding: 10px;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 39px;
+  background: #2478BD;
+  border: none;
 }
 
 @media (max-width: 1100px) {

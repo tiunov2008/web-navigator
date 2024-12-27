@@ -36,7 +36,7 @@
                     <li class="header-nav__item"><a href="/about">О нас</a></li>
                 </ul>
                 <div class="header-user">
-                    <img src="" alt="" class="header-user__avatar">
+                    <img src="{{ user.profile.avatar.url }}" alt="" class="header-user__avatar">
                     {% if user.is_authenticated %}
                     <a class="header-user__name" href="{% url 'users:profile' %}">{{user.username}}</a>
                     <form action="{% url 'users:logout' %}" class="logout" method='post'>
