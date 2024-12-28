@@ -2,6 +2,8 @@
 ---
 ```git clone https://github.com/tiunov2008/web-navigator```
 
+```cd web-navigator```
+
 ```py -m venv .venv```
 
 ```source .venv/Scripts/activate```
@@ -13,3 +15,6 @@
 ```py manage.py runserver```
 
 ---
+# 2.Default admin login and password: 
+### login: admin 
+### password: 12345678
