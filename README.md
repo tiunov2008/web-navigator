@@ -15,3 +15,6 @@
 ```py manage.py runserver```
 
 ---
+# 2.Default admin login and password: 
+### login: admin 
+### password: 12345678
