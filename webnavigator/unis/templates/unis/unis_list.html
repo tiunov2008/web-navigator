@@ -10,11 +10,11 @@
         <div class="container">
             <div class="unis-wrapper">
                 <div class="unis-list__item unis-list__item-score">
-                    Ожидаемый балл: {{user.profile.userScore}}
+                    Ожидаемый балл: {% if user.profile.userScore != None %} {{user.profile.userScore}} {% else %} 100 {% endif %}
                 </div>
                 <div class="unis-list">
                     {% for uni in unis %}
-                        {% if user.profile.userScore >= uni.scoreBudget %}
+                        {% if user.profile.userScore >= uni.scoreBudget or user.profile.userScore == None %}
                         <div class="unis-list__item">
                             <a href="{% url 'unis:page' slug=uni.slug %}" class="unis-list__item-img--wrapper">
                                 <img src="{{ uni.img.url }}" alt="{{ uni.title }}" class="unis-list__item-img">

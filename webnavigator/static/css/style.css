@@ -122,6 +122,9 @@ body {
 .hero-button:first-child {
   margin-right: 20px;
 }
+.hero-button:hover {
+  background: #4787bb;
+}
 .hero-bg {
   background: #000;
   width: 1000px;
@@ -158,6 +161,9 @@ body {
   font-style: normal;
   font-weight: 400;
   width: 20%;
+}
+.best-card__name {
+  text-align: center;
 }
 .best-card img {
   width: 136px;
@@ -307,6 +313,9 @@ body {
   border-radius: 39px;
   background: #2478BD;
   border: none;
+}
+.button:hover {
+  background: #151E63;
 }
 
 @media (max-width: 1100px) {
